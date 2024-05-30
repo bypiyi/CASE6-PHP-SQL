@@ -1,3 +1,12 @@
+<?php 
+
+    // Variabedl i PHP, inleds alltid med dollartecken och
+    // avslutas med ett semikolon.
+    $greetings = "Hello PHP";
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    
+    <?php  
+    echo $greetings
+    ?>
+
+
 </body>
 </html>
