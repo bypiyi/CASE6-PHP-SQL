@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 241, 238);
+    height: 100dvh;
+}
+
+
+
+header,
+footer {
+    background-color: rgba(139, 0, 0, 0);
+    color: whitesmoke;
+    padding: 1rem;
+    background-image: url(/screens/&brie.png);
+}
+
+.active {
+    color: white;
+}
+
+ul#result li {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+
+
+
+/* NAVIGERIGSMENY */
+nav {
+    background-color: rgb(241, 241, 238);
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Centrera länkarna */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Lägg till detta om länkarna kan vara för många för en rad på mobil */
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a.active {
+    border-bottom: 2px solid black;
+    color: black;
+    /* Indikera aktiv länk */
+}
+
+
+/* TODO: add styling for flash message box 
+ including warning, info, success, error */
+
+/* More TODO: add styling for 
+menu, logged in user */

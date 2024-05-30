@@ -1,5 +1,6 @@
 <footer>
 
-    <?= render_copyright() ?>
+    <P>ALICIA</P>
+    <!-- < render_copyright() ?> -->
 
 </footer>
