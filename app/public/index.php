@@ -7,8 +7,7 @@ $information = "Find your favorites today!";
 $title = "Athens Food Guide";
 
 // strlen (antal tecken)
-$numberOfCharacters = strlen ($title);
-echo $numberOfCharacters;
+$number_of_characters = strlen($title);
 
 ?>
 
@@ -26,6 +25,17 @@ echo $numberOfCharacters;
     <h1><?php echo $greetings ?></h1>
 
     <h2><?php echo $information ?></h2>
+
+
+    <hr>
+
+
+    <?php
+    // skriv ut och ange tecken
+    echo "Variabeln med namnet title
+    har värdet $title, och har $number_of_characters tecken";
+    ?>
+
 
 
     <!-- Lite Javascript -->
