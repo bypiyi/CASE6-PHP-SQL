@@ -59,7 +59,7 @@ $information = "Your ultimate guide to discovering the best restaurants in Athen
 Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
 $information_extra = "Create an account to share your experiences and join our community of food lovers.";
 $title = "Athens Food Guide";
-
+$account = "Don't have an account yet? Create one here!";
 
 ?>
 
@@ -94,6 +94,10 @@ $title = "Athens Food Guide";
     <?php include "_includes/nav.php"; ?>
 
 
+    <div class="box_image">
+        <img src="styles/images/slogan.png" class="slogan" alt="">
+    </div>
+
 
     <div class="container">
 
@@ -108,6 +112,23 @@ $title = "Athens Food Guide";
 
             <button type="submit">LOG IN</button>
         </form>
+    </div>
+
+
+
+    <div class="container-content">
+
+        <h1><?= $account ?></h1>
+
+        <div class="button-container">
+            <a href="register.php" class="btn register-btn">Register</a>
+        </div>
+    </div>
+
+
+    <div class="box_image">
+        <img src="styles/images/restaurant2.jpg" alt="" style="width: 100%; height: auto; padding-top: 10px;">
+
     </div>
 
 
