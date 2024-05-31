@@ -1,74 +1,77 @@
-<!-- För att logga in  -->
-
 <?php
-declare(strict_types=1);
-session_start();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo "user trying to submit form";
+    var_dump($_POST);
 
-include_once "_includes/functions.php";
-
-
-// Kontrollera om det finns flash meddelande
-// Om det finns, skriv det till sidan
-display_flash_message();
-
-// Hantera formulär request för att registera ny användare
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    // Hämta data från formuläret
+    // med denna kod hämtas data från formuläret
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
-    // steg: kontrollera att fälten inte är tomma
+    // här kontrolleras att fälten inte är tomma
     if (empty($username) || empty($password)) {
-        set_flash_message_and_redirect_to("Alla fält måste vara ifyllda", "login.php");
+        echo "missing values<br>";
+        exit;
     }
 
-    // steg: kontrollera att användarnamnet finns i databasen
+    // här kontrolleras att användaren finns
     include "_includes/database_connection.php";
 
     try {
-        // TODO NR 1 create helper function for this. T.ex 
-        // get_user_by_username($username)
-        // Se functions.php
         $sql = "SELECT * FROM users WHERE username = :username";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':username' => $username
         ]);
 
-        // Hämta användaren från databasen
+        // hämtar användare från databasen
         $user = $stmt->fetch();
 
-        // Kontrollera att användaren finns i databasen 
-        // (OM inte finns skicka användaren till register.php)
+        // här kontrollera att användaren finns, om inte, skicka till register.php
         if (!$user) {
-            set_flash_message_and_redirect_to("Användarnamnet finns inte, registrera dig", "register.php");
+            header("Location: register.php");
+            exit;
         }
 
-        // steg: kontrollera att lösenorden matchar varandra
-        $is_matching_password = password_verify($password, $user['password']);
-        if (!$is_matching_password) {
-            set_flash_message_and_redirect_to("Fel lösenord", "login.php");
+        // här kontrolleras att lösenordet stämmer
+        $is_matching_passwords = password_verify($password, $user['password']);
+        if (!$is_matching_passwords) {
+            echo "The password dosen't match<br>";
+            exit;
         }
 
-        // steg: skapa en session för inloggad användare
+        // skapar en session för inloggad användare
+        session_start();
         $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
+        $_SESSION["username"] = $user["username"];
 
         // skicka användaren till home.php
-        set_flash_message_and_redirect_to("Lyckad inloggning", "home.php");
+        header("Location: home.php");
+        exit;
+
     } catch (PDOException $e) {
-        echo "Database connection exception $e";
+        echo "database connection exception";
     }
 }
+
+// Greetings m.m
+$greetings = "Athens Food Guide";
+$information = "Your ultimate guide to discovering the best restaurants in Athens.
+Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
+$information_extra = "Create an account to share your experiences and join our community of food lovers.";
+$title = "Athens Food Guide";
+
+
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title><?= $title ?></title>
+
+    <link rel="stylesheet" href="styles/login.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,26 +83,49 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <body>
 
-    <!-- inkludera sidhuvud -->
-    <?php include "_includes/header.php"; ?>
+    <header>
+        <div>
+            <img src="styles/images/logo.png" class="header-logo" alt="">
+        </div>
+    </header>
+
 
     <!-- inkludera nav -->
     <?php include "_includes/nav.php"; ?>
 
-    <!-- Ett Formulär för att logga in -->
-    <h1>Login</h1>
-    <form action="login.php" method="post">
-        <label for="username">Användarnamn</label>
-        <input type="text" name="username" id="username">
 
-        <label for="password">Lösenord</label>
-        <input type="password" name="password" id="password">
 
-        <button type="submit">Login</button>
-    </form>
+    <div class="container">
 
-    <!-- inkludera nav -->
-    <?php include "_includes/footer.php"; ?>
+
+        <form action="login.php" method="post">
+
+            <label for="username">USERNAME</label>
+            <input type="text" name="username" id="username">
+
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password">
+
+            <button type="submit">LOG IN</button>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h1><?= $greetings ?></h1>
+        <p>&copy; Alicia Piyi Tsirigotis <br>
+            Glimåkra Folkhögskola <br>
+            PHP & SQL</p>
+
+        <div>
+            <img src="styles/images/logo.png" class="header-logo" alt="">
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

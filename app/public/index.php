@@ -54,18 +54,18 @@ $title = "Athens Food Guide";
     <div class="container-content">
 
         <h1><?= $greetings ?></h1>
-        <h2><?= $information ?></h2>
+        <h2><?= $information ?></h2> <br>
         <h2><?= $information_extra ?></h2>
 
     </div>
 
     <div class="button-container">
-        <button class="btn register-btn">Register</button>
-        <button class="btn login-btn">Login</button>
+        <a href="register.php" class="btn register-btn">Register</a>
+        <a href="login.php" class="btn login-btn">Login</a>
     </div>
 
     <div class="box_image">
-        <img src="styles/images/restaurant1.jpg" alt="" style="width: 400px; height: auto; padding-top: 10px;">
+        <img src="styles/images/restaurant1.jpg" alt="" style="width: 100%; height: auto; padding-top: 10px;">
 
     </div>
 
@@ -75,8 +75,8 @@ $title = "Athens Food Guide";
 
         <h1><?= $greetings ?></h1>
         <p>&copy; Alicia Piyi Tsirigotis <br>
-        Glimåkra Folkhögskola <br>
-        PHP & SQL</p>
+            Glimåkra Folkhögskola <br>
+            PHP & SQL</p>
 
         <div>
             <img src="styles/images/logo.png" class="header-logo" alt="">

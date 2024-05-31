@@ -120,56 +120,50 @@ h2 {
 
 /* ---------------- */
 
-/* SLOGAN */
-.box_image {
-    text-align: center; /* Centrera innehåll horisontellt */
-    padding-top: 15px;
-}
-
-.slogan {
-    width: 280px;
-    height: auto;
-}
-/* ---------------- */
 
 
-
-/* --------------- BUTTONS -------------- */
-.button-container {
-    display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    gap: 5px; /* Utrymme mellan knapparna */
-    max-width: 800px;
+/* -------- FORM ------------- */
+.container {
+    background-color: #ffffff;
     padding: 20px;
-    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 14px;
-    border: none;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    text-decoration: none
 }
 
-.login-btn {
-    background-color: #F1F1EE;
-    color: black;
-    border: 1px solid black;
-}
-
-
-.register-btn {
-    background-color: #000000;
+button[type="submit"] {
+    padding: 10px;
+    background-color: #5cb85c;
     color: white;
-    border: 1px solid black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
 }
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+/* ---------------------- */
 
 
 /* -----------  FOOTER ---------- */
@@ -189,10 +183,3 @@ p {
     letter-spacing: 1.4px; 
     line-height: 1.5; 
 }
-
-
-/* TODO: add styling for flash message box 
- including warning, info, success, error */
-
-/* More TODO: add styling for 
-menu, logged in user */
