@@ -1,18 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
     background-color: rgb(241, 241, 238);
-    height: 100dvh;
 }
 
 
 
-header,
-footer {
-    background-color: rgba(139, 0, 0, 0);
-    color: whitesmoke;
-    padding: 1rem;
-    background-image: url(/screens/&brie.png);
+.header-logo {
+    width: 50px; /* Ändra bredden till 100 pixlar */
+    height: 50px; /* Bevara bildens proportioner */
 }
 
 .active {

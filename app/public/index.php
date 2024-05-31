@@ -22,23 +22,25 @@ $title = "Athens Food Guide";
     <title><?= $title ?></title>
 
     <link rel="stylesheet" href="styles/style.css">
-    
+
 </head>
 
 <body>
 
-    <!-- inkludera sidhuvud -->
-    <?php  include "_includes/header.php"; ?>
+    <header>
+        <div>
+        <img src="styles/images/logo.png" class="header-logo" alt="">
+        </div>
+    </header>
+
 
     <!-- inkludera nav -->
-    <?php  include "_includes/nav.php"; ?>
+    <?php include "_includes/nav.php"; ?>
 
 
     <h1><?= $greetings ?></h1>
     <h2><?= $information ?></h2>
 
-    <!-- inkludera sidfot -->
-    <?php  include "_includes/footer.php"; ?>
 
 </body>
 
