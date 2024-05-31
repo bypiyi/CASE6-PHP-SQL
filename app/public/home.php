@@ -1,11 +1,10 @@
 <?php
 // Greetings m.m
 $greetings = "Athens Food Guide";
-$information = "Your ultimate guide to discovering the best restaurants in Athens.
-Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
-$information_extra = "Create an account to share your experiences and join our community of food lovers.";
+$welcome_message = "Welcome to our community of food enthusiasts! Start exploring and discovering the best restaurants in Athens. 
+Share your experiences, add new restaurants, and connect with fellow food lovers.";
+$instruction = "Ready to get started? Use the navigation menu to add a restaurant or discover new places. Have fun exploring!";
 $title = "Athens Food Guide";
-$account = "Don't have an account yet? Create one here!";
 
 ?>
 
@@ -53,18 +52,13 @@ $account = "Don't have an account yet? Create one here!";
     <div class="container-content">
 
         <h1><?= $greetings ?></h1>
-        <h2><?= $information ?></h2> <br>
-        <h2><?= $information_extra ?></h2>
+        <h2><?= $welcome_message ?></h2> <br>
+        <h2><?= $instruction ?></h2>
 
-    </div>
-
-    <div class="button-container">
-        <a href="register.php" class="btn register-btn">Register</a>
-        <a href="login.php" class="btn login-btn">Login</a>
     </div>
 
     <div class="box_image">
-        <img src="styles/images/restaurant1.jpg" alt="" style="width: 100%; height: auto; padding-top: 10px;">
+        <img src="styles/images/picture.jpg" alt="" style="width: 100%; height: auto; padding-top: 10px;">
 
     </div>
 
