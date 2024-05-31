@@ -1,8 +1,4 @@
 <?php
-declare(strict_types=1);
-session_start();
-
-include "_includes/functions.php";
 
 // Variabedl i PHP, inleds alltid med dollartecken och
 // avslutas med ett semikolon.
