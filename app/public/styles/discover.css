@@ -1,0 +1,242 @@
+/* --------- FÖR MOBIL --------- */
+
+@media screen and (max-width: 480px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+/* ---------  BODY ------------- */
+body {
+    background-color: rgb(241, 241, 238);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+/* ----------------------------- */
+
+
+
+
+/* ------------ HEADER ------- */
+
+header {
+    text-align: center;
+}
+
+.header-logo {
+    width: 120px;
+    height: auto;
+    padding-top: 15px;
+
+}
+/* --------------------------- */
+
+
+
+
+
+/* NAVIGERIGSMENY */
+nav {
+    background-color: rgb(241, 241, 238);
+    padding: 20px;
+    text-align: center;
+}
+
+nav li {
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    /* Centrera länkarna */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Lägg till detta om länkarna kan vara för många för en rad på mobil */
+}
+
+nav a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+}
+/* --------------------- */
+
+
+/* -------- CONTAINERS -------------- */
+.container-content {
+    max-width: 800px;
+    background-color: rgb(36, 36, 36);
+    padding: 30px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;;
+    letter-spacing: 3px; /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5; /* Ökar radavståndet */
+    text-transform: uppercase; /* Gör all text i containern versal */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5; /* Ökar radavståndet */
+}
+
+/* ---------------- */
+
+
+/* SLOGAN */
+.box_image {
+    text-align: center; /* Centrera innehåll horisontellt */
+    padding-top: 15px;
+}
+
+.slogan {
+    width: 280px;
+    height: auto;
+}
+/* ---------------- */
+
+
+
+/* --------SEARCH----------- */
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search input[type="search"] {
+    width: 90%;
+    padding: 16px;
+    background-color: #f1f1f1;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.search button[type="submit"] {
+    width: 90%;
+    padding: 15px 20px;
+    background-color: #f1f1f1;
+    color: black;
+    border: solid 1px #f1f1f1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5; /* Ökar radavståndet */
+    cursor: pointer;
+}
+
+/* Result */
+.result {
+        
+    /* width: 150px;
+    height: 150px; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    
+}
+.content {
+    color: white;
+    padding: 0;
+    font-size: 16pt;
+}
+/* ------------------ */
+
+
+
+
+
+
+/* -----MENY AS LOGGED IN --------- */
+.menu_active {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu_active a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu_active a:hover {
+    background-color: #575757;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.menu_active a.active {
+    background-color: #575757;
+    color: #ffffff;
+    border-radius: 4px;
+}
+/* --------------------- */
+
+
+
+/* -----------  FOOTER ---------- */
+.footer {
+    color: black;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.6rem;
+    letter-spacing: 1.4px; 
+    line-height: 1.5; 
+}
