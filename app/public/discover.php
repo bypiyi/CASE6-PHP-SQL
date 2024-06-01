@@ -3,9 +3,9 @@
 // Variabedl i PHP, inleds alltid med dollartecken och
 // avslutas med ett semikolon.
 $greetings = "Athens Food Guide";
-$greetings2 = "DISCOVER A FAVORITE";
-$get_started = "Type something in the searchbar to get started.";
-$favorite = "Find your favorite today!";
+$information = "Your ultimate guide to discovering the best restaurants in Athens.
+Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
+$information_extra = "Create an account to share your experiences and join our community of food lovers.";
 $title = "Athens Food Guide";
 
 
@@ -47,17 +47,21 @@ $title = "Athens Food Guide";
 
     <div class="container-content">
 
-        <h1><?= $greetings2 ?></h1>
-        <h2><?= $get_started ?></h2> <br>
-        <h2><?= $favorite ?></h2>
+        <p id="greetings2">
+            DISCOVER A FAVORITE
+        </p>
 
+        <p id="get_started">
+            Type something in the searchbar to get started. <br><br>
+            Find your favorite today!
+        </p>
 
 
 
         <div class="search">
 
             <form action="discover.php" method="post">
-                <input id="search" type="search" name="search" >
+                <input id="search" type="search" name="search">
 
                 <button type="submit">SHOW ME THE GOOD STUFF!</button>
 
@@ -96,12 +100,14 @@ $title = "Athens Food Guide";
 
 
         <div class="exampels">
-            <h2>Don't know what to serach for? <br>
-                Here are some exampels!</h2> <br>
+            <p id="greetings2">
+                Don't know what to serch for?<br>
+                Here are some <br> exampels!
+            </p> <br>
 
-            <h2>"Breakfast" "Sushi" "Italian" "Downtown" "Fish"</h2>
-
-
+            <p id="get_started">
+                "Breakfast" "Sushi"<br> "Italian" "Downtown" "Fish"
+            </p>
         </div>
 
     </div>
