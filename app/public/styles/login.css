@@ -154,6 +154,7 @@ input[type="password"] {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid black;
+    border-radius: 0;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;

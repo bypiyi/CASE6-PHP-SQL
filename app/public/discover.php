@@ -57,7 +57,7 @@ $title = "Athens Food Guide";
         <div class="search">
 
             <form action="discover.php" method="post">
-                <input id="search" type="search" name="search">
+                <input id="search" type="search" name="search" >
 
                 <button type="submit">SHOW ME THE GOOD STUFF!</button>
 
@@ -92,6 +92,16 @@ $title = "Athens Food Guide";
                 }
             }
             ?>
+        </div>
+
+
+        <div class="exampels">
+            <h2>Don't know what to serach for? <br>
+                Here are some exampels!</h2> <br>
+
+            <h2>"Breakfast" "Sushi" "Italian" "Downtown" "Fish"</h2>
+
+
         </div>
 
     </div>

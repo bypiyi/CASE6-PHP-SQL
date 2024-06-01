@@ -93,11 +93,10 @@ nav a {
 
 h1 {
     font-family: "Poppins", sans-serif;
-    color: #f1f1f1;
-    font-weight: 600;
+    font-weight: 900;
     font-style: normal;
-    font-size: 1.2rem;;
-    letter-spacing: 3px; /* Ökar avståndet mellan bokstäver */
+    font-size: 1rem;;
+    letter-spacing: 2px; /* Ökar avståndet mellan bokstäver */
     line-height: 1.5; /* Ökar radavståndet */
     text-transform: uppercase; /* Gör all text i containern versal */
     padding-bottom: 10px;
@@ -105,12 +104,16 @@ h1 {
 
 h2 {
     font-family: "Poppins", sans-serif;
-    color: #f1f1f1;
     font-weight: 500;
     font-style: normal;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
     line-height: 1.5; /* Ökar radavståndet */
+}
+
+
+.exampels {
+    margin-top: 60px;
 }
 
 /* ---------------- */
@@ -150,7 +153,7 @@ h2 {
     background-color: #f1f1f1;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 10px;
 }
 
@@ -167,7 +170,35 @@ h2 {
     letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
     line-height: 1.5; /* Ökar radavståndet */
     cursor: pointer;
+    margin-top: 10px;
 }
+
+
+/* ---- TEXT ------- */
+.upper {
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;;
+    letter-spacing: 3px; /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5; /* Ökar radavståndet */
+    text-transform: uppercase; /* Gör all text i containern versal */
+    padding-bottom: 10px;
+}
+
+.lower {
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5; /* Ökar radavståndet */
+}
+/* ----------------- */
+
+
 
 /* Result */
 .result {
@@ -231,6 +262,8 @@ h2 {
     padding-top: 30px;
     padding-bottom: 20px;
 }
+
+
 
 p {
     font-family: "Poppins", sans-serif;
