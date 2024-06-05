@@ -2,8 +2,8 @@
 
 // databas koppling
 $host = "mysql";
-$database = "db_learn";
-$user = "db_user";
+$database = "db_case";
+$usern = "db_user";
 $passw = "db_password";
 
 $options = [
@@ -12,7 +12,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $user, $passw, $options);
+    $pdo = new PDO("mysql:host=$host;dbname=$database", $usern, $passw, $options);
 } catch (PDOException $e) {
     echo "Database connection exception $e";
 }
