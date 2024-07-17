@@ -206,7 +206,34 @@ button[type="submit"] {
 
 /* ------------------ */
 
+/* FILVÄLJARE */
+.file{
+    color: white;
+}
 
+select[multiple] {
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    overflow: auto;
+}
+
+
+ul#result {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+ul#result li {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
 
 
 /* -----------  FOOTER ---------- */

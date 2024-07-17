@@ -62,6 +62,7 @@ $title = "Athens Food Guide";
     <?php include "_includes/menu_active.php"; ?>
 
     <main>
+        <h1>hej</h1>
 
         <div class="results">
 
