@@ -7,6 +7,10 @@ include "_includes/database_connection.php";
 include_once "_classes/Database.php";
 include_once "_classes/Sample.php";
 
+// $sql = "SELECT VERSION()";
+// $query = $pdo->query($sql);
+// $row = $query->fetch();
+// print_r($row);
 
 // använd klassen Sample (vårtecken)
 $sample = new Sample();

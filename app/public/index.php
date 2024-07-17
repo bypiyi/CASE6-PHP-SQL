@@ -1,5 +1,6 @@
 <?php
 
+
 // Variabedl i PHP, inleds alltid med dollartecken och
 // avslutas med ett semikolon.
 $greetings = "Athens Food Guide";
