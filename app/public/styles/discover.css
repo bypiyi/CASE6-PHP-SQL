@@ -216,6 +216,38 @@ h2 {
     padding: 0;
     font-size: 16pt;
 }
+
+
+.results {
+    background-color: yellow; /* Temporär bakgrundsfärg för att se om elementet visas */
+}
+
+.results ul {
+    list-style-type: none; /* Ta bort punktlistor om det behövs */
+    padding: 0;
+}
+
+.results li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.results .name {
+    display: block;
+    font-weight: bold;
+}
+
+.results .address {
+    display: block;
+}
+
+.results a {
+    display: inline-block;
+    margin-top: 5px;
+    color: blue;
+    text-decoration: none;
+}
+
 /* ------------------ */
 
 

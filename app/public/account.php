@@ -12,10 +12,7 @@ $stmt->execute();
 
 $rows = $stmt->fetchAll();
 
-?>
 
-
-<?php
 
 // Variabedl i PHP, inleds alltid med dollartecken och
 // avslutas med ett semikolon.
@@ -38,7 +35,7 @@ $title = "Athens Food Guide";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
 
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +61,7 @@ $title = "Athens Food Guide";
     <main>
         <h1>hej</h1>
 
-        <div class="results">
+        <div class="result">
 
             <ul id="result">
                 <?php
@@ -96,6 +93,32 @@ $title = "Athens Food Guide";
                 ?>
             </ul>
         </div>
+
+        <div class="results">
+        <ul id="result">
+            <?php
+            // Assuming $pdo is your PDO connection
+            $sql = "SELECT business.name, business.address, business.hours, category.category 
+                    FROM business 
+                    JOIN category ON business.category_id = category.id";
+            $stmt = $pdo->query($sql);
+            $rows = $stmt->fetchAll();
+
+            if (!empty($rows)) {
+                foreach ($rows as $row) {
+                    echo "<li>";
+                    echo "<span class=\"name\">" . htmlspecialchars($row['name']) . "</span>";
+                    echo "<span class=\"address\">" . htmlspecialchars($row['address']) . "</span>";
+                    echo "<span class=\"hours\">" . htmlspecialchars($row['hours']) . "</span>";
+                    echo "<span class=\"category\">" . htmlspecialchars($row['category']) . "</span>";
+                    echo "</li>";
+                }
+            } else {
+                echo "<li>No restaurants found.</li>";
+            }
+            ?>
+        </ul>
+    </div>
 
 
 
