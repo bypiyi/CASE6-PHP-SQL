@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $name = trim($_POST['name']);
     $address = trim($_POST['address']);
-    $hours = trim($_POST['hours']);
+    $description = trim($_POST['description']);
 
-    if (empty($name) || empty($address) || empty($hours)) {
+    if (empty($name) || empty($address) || empty($description)) {
         $status_message = "Missing values";
     } else {
         try {
@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $company = $stmt->fetch();
 
             if ($company) {
-                $status_message = "Företaget finns redan";
+                $status_message = "The business already exists";
             } else {
-                $file_name = '';
+                $file_name = null;
                 if (!empty($_FILES['file']['name'])) {
                     $target_dir = "uploads/";
                     $file_name = basename($_FILES['file']['name']);
@@ -31,23 +31,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     if (in_array($file_type, $allow_types)) {
                         if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file_path)) {
-                            $status_message = "File uploaded successfully";
+                            // File uploaded successfully
                         } else {
                             $status_message = "Error uploading file";
-                            $file_name = '';
                         }
                     } else {
                         $status_message = "Sorry, only JPG, JPEG, PNG, & GIF files are allowed";
-                        $file_name = '';
                     }
                 }
 
-                $sql = "INSERT INTO business (name, address, open_hours, image_url, user_id) VALUES (:name, :address, :open_hours, :image_url, :user_id)";
+                $sql = "INSERT INTO business (name, address, description, image_url, user_id) VALUES (:name, :address, :description, :image_url, :user_id)";
                 $stmt = $pdo->prepare($sql);
                 $insert = $stmt->execute([
                     ':name' => $name,
                     ':address' => $address,
-                    ':open_hours' => $hours,
+                    ':description' => $description,
                     ':image_url' => $file_name,
                     ':user_id' => $_SESSION['user_id']
                 ]);
@@ -64,13 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fetch and display added restaurants
-$sql = "SELECT b.name, b.address, b.open_hours, b.image_url FROM business b";
-$stmt = $pdo->query($sql);
-$rows = $stmt->fetchAll();
-
-// Variabler i PHP, inleds alltid med dollartecken och
-// avslutas med ett semikolon.
 $greetings = "Athens Food Guide";
 $information = "Your ultimate guide to discovering the best restaurants in Athens.
 Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
@@ -85,8 +76,7 @@ $title = "Athens Food Guide";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-
-    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/share.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,6 +87,7 @@ $title = "Athens Food Guide";
 </head>
 
 <body>
+
     <header>
         <div>
             <img src="styles/images/logo.png" class="header-logo" alt="">
@@ -118,8 +109,8 @@ $title = "Athens Food Guide";
             <label for="address">ADDRESS</label>
             <input type="text" name="address" id="address" required>
 
-            <label for="hours">OPENING HOURS</label>
-            <input type="text" name="hours" id="hours" required>
+            <label for="description">DESCRIPTION</label>
+            <textarea name="description" id="description" required></textarea>
 
             <label for="file">UPLOAD IMAGE (optional)</label>
             <input type="file" name="file" id="file" class="file">
@@ -139,14 +130,21 @@ $title = "Athens Food Guide";
     <div class="results">
         <ul id="result">
             <?php
+            $sql = "SELECT * FROM business";
+            $stmt = $pdo->query($sql);
+            $rows = $stmt->fetchAll();
+
             if (!empty($rows)) {
                 foreach ($rows as $row) {
                     echo "<li>";
                     echo "<span class=\"name\">" . htmlspecialchars($row['name']) . "</span>";
                     echo "<span class=\"address\">" . htmlspecialchars($row['address']) . "</span>";
-                    echo "<span class=\"hours\">" . htmlspecialchars($row['open_hours']) . "</span>";
+                    echo "<span class=\"description\">" . htmlspecialchars($row['description']) . "</span>";
                     if (!empty($row['image_url'])) {
                         echo "<img src=\"uploads/" . htmlspecialchars($row['image_url']) . "\" alt=\"" . htmlspecialchars($row['name']) . "\" style=\"max-width:100px;\">";
+                    }
+                    if (isset($_SESSION['user_id']) && $_SESSION['user_id'] === $row['user_id']) {
+                        echo "<a href='account_edit.php?id=" . $row['id'] . "'>EDIT</a>";
                     }
                     echo "</li>";
                 }
@@ -160,10 +158,7 @@ $title = "Athens Food Guide";
     <!-- Footer -->
     <footer class="footer">
         <h1><?= $greetings ?></h1>
-        <p>&copy; Alicia Piyi Tsirigotis <br>
-            Glimåkra Folkhögskola <br>
-            PHP & SQL</p>
-
+        <p>&copy; Alicia Piyi Tsirigotis <br> Glimåkra Folkhögskola <br> PHP & SQL</p>
         <div>
             <img src="styles/images/logo.png" class="header-logo" alt="">
         </div>
