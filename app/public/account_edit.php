@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
     if ($row) {
         $name = $row['name'];
         $address = $row['address'];
+        $description = $row['description'];
     }
 }
 
@@ -112,6 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
             <label for="address">address</label>
             <input type="text" name="address" id="address" value="<?= $address ?>">
 
+            <label for="description">description</label>
+            <input type="description" name="description" id="description" value="<?= $description ?>">
 
             <input type="submit" value="SAVE" name="save" id="edits">
             <input type="submit" value="REMOVE" name="delete" id="edits">
@@ -121,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
             <input type="hidden" name="id" value="<?= $id ?>">
         </form>
     </main>
-    
+
 
     <!-- Footer -->
     <footer class="footer">
