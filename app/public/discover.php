@@ -66,36 +66,7 @@ $title = "Athens Food Guide";
                 <button type="submit">SHOW ME THE GOOD STUFF!</button>
 
             </form>
-            <?php
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $name = trim($_POST['search']);
-
-                include "_includes/database_connection.php";
-
-                try {
-                    $sql = "SELECT `name`, `address` FROM `business` WHERE `name` LIKE :name";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute([':name' => '%' . $name . '%']);
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                    if ($rows) {
-                        echo "<div id='results'>";
-                        foreach ($rows as $row) {
-                            echo "<div class='result'>";
-                            echo "<h2>" . htmlspecialchars($row['name']) . "</h2>";
-                            echo "<p>" . htmlspecialchars($row['address']) . "</p>";
-
-                            echo "</div>";
-                        }
-                        echo "</div>";
-                    } else {
-                        echo "<p>No results found for '" . htmlspecialchars($name) . "'</p>";
-                    }
-                } catch (PDOException $e) {
-                    echo "Database connection exception: $e";
-                }
-            }
-            ?>
+            
         </div>
 
 
@@ -110,6 +81,39 @@ $title = "Athens Food Guide";
             </p>
         </div>
 
+    </div>
+
+    <div class="result_discover">
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = trim($_POST['search']);
+
+            include "_includes/database_connection.php";
+
+            try {
+                $sql = "SELECT `name`, `address`, `description` FROM `business` WHERE `name` LIKE :name";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':name' => '%' . $name . '%']);
+                $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if ($rows) {
+                    echo "<div id='results'>";
+                    foreach ($rows as $row) {
+                        echo "<div class='result'>";
+                        echo "<h2>" . htmlspecialchars($row['name']) . "</h2>";
+                        echo "<p>" . htmlspecialchars($row['address']) . "</p>";
+                        echo "<p>" . htmlspecialchars($row['description']) . "</p>";
+                        echo "</div>";
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>No results found for '" . htmlspecialchars($name) . "'</p>";
+                }
+            } catch (PDOException $e) {
+                echo "Database connection exception: $e";
+            }
+        }
+        ?>
     </div>
 
 

@@ -78,6 +78,10 @@ $title = "Athens Food Guide";
     <title><?= $title ?></title>
     <link rel="stylesheet" href="styles/share.css">
 
+    <!-- Hjärta -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KtM4B7lGRpLN4ZC2MkCbqVoVtyzQfK8b9vYFgUn37Jp9E6J" crossorigin="anonymous">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,7 +101,17 @@ $title = "Athens Food Guide";
     <!-- inkludera nav -->
     <?php include "_includes/menu_active.php"; ?>
 
+
+    <div class="box_image">
+        <img src="styles/images/slogan.png" class="slogan" alt="">
+    </div>
+
+
+
     <div class="search">
+
+        <h1>Add your new, old or recently discoverd favorite</h1>
+
         <?php if (!empty($status_message)) {
             echo '<p>' . $status_message . '</p>';
         } ?>
@@ -119,14 +133,12 @@ $title = "Athens Food Guide";
         </form>
     </div>
 
-    <div class="box_image">
-        <img src="styles/images/slogan.png" class="slogan" alt="">
+
+    <div class="added">
+    <h1>hey, you just added:</h1>
     </div>
 
-    <div class="box_image">
-        <img src="styles/images/restaurant5.jpg" alt="" style="width: 100%; height: auto; padding-top: 30px;">
-    </div>
-
+    <!-- Results -->
     <div class="results">
         <ul id="result">
             <?php
@@ -146,6 +158,8 @@ $title = "Athens Food Guide";
                     if (isset($_SESSION['user_id']) && $_SESSION['user_id'] === $row['user_id']) {
                         echo "<a href='account_edit.php?id=" . $row['id'] . "'>EDIT</a>";
                     }
+                    // Försök till hjärta, funkar inte?
+                    echo "<i class='fa fa-heart' onclick='toggleFavorite(this)'></i>"; // Hjärtikonen
                     echo "</li>";
                 }
             } else {
@@ -155,6 +169,14 @@ $title = "Athens Food Guide";
         </ul>
     </div>
 
+
+
+    <div class="box_image">
+        <img src="styles/images/restaurant5.jpg" alt="" style="width: 100%; height: auto; padding-top: 30px;">
+    </div>
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <h1><?= $greetings ?></h1>
@@ -163,7 +185,9 @@ $title = "Athens Food Guide";
             <img src="styles/images/logo.png" class="header-logo" alt="">
         </div>
     </footer>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

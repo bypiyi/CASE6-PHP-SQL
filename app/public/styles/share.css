@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 /* ----------------------------- */
 
 
@@ -36,6 +37,7 @@ header {
     padding-top: 15px;
 
 }
+
 /* --------------------------- */
 
 
@@ -50,7 +52,7 @@ nav {
 }
 
 nav li {
-    margin-top:5px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -73,8 +75,10 @@ nav a {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
 }
+
 /* --------------------- */
 
 
@@ -94,12 +98,17 @@ nav a {
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
+    text-align: center;
     font-style: normal;
-    font-size: 1rem;;
-    letter-spacing: 2px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
-    padding-bottom: 10px;
+    font-size: 1.1rem;
+    ;
+    letter-spacing: 2px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
+    padding-bottom: 40px;
 }
 
 h2 {
@@ -107,14 +116,17 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
 
 
 .exampels {
     margin-top: 70px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    ;
 }
 
 /* ---------------- */
@@ -122,7 +134,8 @@ h2 {
 
 /* SLOGAN */
 .box_image {
-    text-align: center; /* Centrera innehåll horisontellt */
+    text-align: center;
+    /* Centrera innehåll horisontellt */
     padding-top: 15px;
 }
 
@@ -130,49 +143,120 @@ h2 {
     width: 280px;
     height: auto;
 }
+
 /* ---------------- */
 
 
 
 /* --------SEARCH----------- */
+/* Form Container */
 .search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
+    margin: 40px auto;
+    /* Center the form and add top and bottom margin */
+    padding: 30px;
+    /* Add padding inside the form container */
+    background-color: #f9f9f9;
 }
 
-.search form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.search input[type="search"] {
-    width: 90%;
-    padding: 16px;
-    background-color: #f1f1f1;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    margin-top: 60px;
+/* Form Labels */
+.search label {
+    display: block;
     margin-bottom: 10px;
-}
-
-.search button[type="submit"] {
-    width: 90%;
-    padding: 15px 20px;
-    background-color: #f1f1f1;
-    color: black;
-    border: solid 1px #f1f1f1;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
     font-size: 1rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    cursor: pointer;
-    margin-top: 10px;
+    letter-spacing: 1.4px;
+    /* Increase letter spacing */
+    line-height: 1.5;
+    /* Increase line height */
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    /* Center the labels */
 }
+
+/* Form Inputs */
+.search input[type="text"],
+.search input[type="file"],
+.search textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Textarea */
+.search textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.search button[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Status Message */
+.search p {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* ----------- */
+
+
+/* ADDED-BOX */
+.added {
+    padding: 20px;
+    margin-bottom: -30px;
+}
+
+.account {
+    padding: 40px;
+    background-color: #242424;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.account_text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-style: normal;
+    font-size: 1.1rem;
+    ;
+    letter-spacing: 2px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.8;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
+}
+
+/* -------- */
+
 
 
 /* ---- TEXT ------- */
@@ -181,10 +265,14 @@ h2 {
     color: #f1f1f1;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.2rem;;
-    letter-spacing: 3px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
+    font-size: 1.2rem;
+    ;
+    letter-spacing: 3px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
     padding-bottom: 10px;
 }
 
@@ -194,42 +282,132 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.9rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
+
 /* ----------------- */
 
 
 
 /* Result */
-.result {
-        
-    /* width: 150px;
-    height: 150px; */
+.results {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#result {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#result li {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    color: white;
-    
-}
-.content {
-    color: white;
-    padding: 0;
-    font-size: 16pt;
+    align-items: center;
+
 }
 
+#result .name {
+    color: black;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+}
 
-    ul#result {
-        display: flex;
-        flex-direction: column;
-        color: white;
-    }
+#result .address {
+    color: black;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+}
 
-    ul#result li {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        color: white;
-    }
+#result .description {
+    color: black;
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+}
+
+#result img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#result a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+}
+
+#result a:hover {
+    background-color: #0056b3;
+}
+
+.fa-heart {
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.fa-heart.favorited {
+    color: #e74c3c;
+}
+
 /* ------------------ */
 
 
@@ -265,6 +443,7 @@ h2 {
     color: #ffffff;
     border-radius: 4px;
 }
+
 /* --------------------- */
 
 
@@ -285,6 +464,6 @@ p {
     font-weight: 500;
     font-style: normal;
     font-size: 0.6rem;
-    letter-spacing: 1.4px; 
-    line-height: 1.5; 
+    letter-spacing: 1.4px;
+    line-height: 1.5;
 }

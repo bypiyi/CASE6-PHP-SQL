@@ -201,56 +201,55 @@ h2 {
 
 
 
-/* Result */
+
+/* RESULT ON DISCOVERPAGE */
+.result_discover {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#results {
+    margin-top: 20px;
+}
+
 .result {
-        
-    /* width: 150px;
-    height: 150px; */
-    display: flex;
-    flex-direction: column;
-    color: white;
-    
-}
-.content {
-    color: white;
-    padding: 0;
-    font-size: 16pt;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.results {
-    background-color: yellow; /* Temporär bakgrundsfärg för att se om elementet visas */
+.result h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.results ul {
-    list-style-type: none; /* Ta bort punktlistor om det behövs */
-    padding: 0;
+.result p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
 }
 
-.results li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+/* Additional styling for the no results message */
+.result_discover p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #e74c3c;
 }
 
-.results .name {
-    display: block;
-    font-weight: bold;
-}
-
-.results .address {
-    display: block;
-}
-
-.results a {
-    display: inline-block;
-    margin-top: 5px;
-    color: blue;
-    text-decoration: none;
-}
-
-/* ------------------ */
-
-
+/* ----------- */
 
 
 

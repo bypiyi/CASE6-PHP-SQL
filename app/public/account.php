@@ -35,7 +35,7 @@ $title = "Athens Food Guide";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
 
-    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/share.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,67 +58,51 @@ $title = "Athens Food Guide";
     <!-- inkludera nav -->
     <?php include "_includes/menu_active.php"; ?>
 
+    <div class="box_image">
+        <img src="styles/images/slogan.png" class="slogan" alt="">
+    </div>
+
+
     <main>
-        <h1>hej</h1>
 
-        <div class="result">
 
+        <div class="account">
+            <p class="account_text">
+                Welcomet to your account. Here you'll see your added
+                restaurants
+            </p>
+        </div>
+
+        <!-- Results -->
+        <div class="results">
             <ul id="result">
                 <?php
+                $sql = "SELECT * FROM business";
+                $stmt = $pdo->query($sql);
+                $rows = $stmt->fetchAll();
 
-                foreach ($rows as $row) {
-
-                    $li = "<li>";
-
-                    $li .= "<span class=\"name\">";
-                    $li .= $row['name'];
-                    $li .= "</span>";
-
-                    $li .= "<span class=\"address\">";
-                    $li .= $row['address'];
-                    $li .= "</span>";
-
-                    if (isset($_SESSION['user_id']) && $_SESSION['user_id'] === $row['user_id']) {
-
-                        $li .= "<a href='account_edit.php?id=" . $row['id'] . "'>";
-                        $li .= "EDIT";
-                        $li .= "</a>";
-                    } else {
-                        $li .= "<span></span>";
+                if (!empty($rows)) {
+                    foreach ($rows as $row) {
+                        echo "<li>";
+                        echo "<span class=\"name\">" . htmlspecialchars($row['name']) . "</span>";
+                        echo "<span class=\"address\">" . htmlspecialchars($row['address']) . "</span>";
+                        echo "<span class=\"description\">" . htmlspecialchars($row['description']) . "</span>";
+                        if (!empty($row['image_url'])) {
+                            echo "<img src=\"uploads/" . htmlspecialchars($row['image_url']) . "\" alt=\"" . htmlspecialchars($row['name']) . "\" style=\"max-width:100px;\">";
+                        }
+                        if (isset($_SESSION['user_id']) && $_SESSION['user_id'] === $row['user_id']) {
+                            echo "<a href='account_edit.php?id=" . $row['id'] . "'>EDIT</a>";
+                        }
+                        // Försök till hjärta, funkar inte?
+                        echo "<i class='fa fa-heart' onclick='toggleFavorite(this)'></i>"; // Hjärtikonen
+                        echo "</li>";
                     }
-
-                    $li .= "</li>";
-                    echo $li;
+                } else {
+                    echo "<li>No restaurants found.</li>";
                 }
                 ?>
             </ul>
         </div>
-
-        <div class="results">
-        <ul id="result">
-            <?php
-            // Assuming $pdo is your PDO connection
-            $sql = "SELECT business.name, business.address, business.hours, category.category 
-                    FROM business 
-                    JOIN category ON business.category_id = category.id";
-            $stmt = $pdo->query($sql);
-            $rows = $stmt->fetchAll();
-
-            if (!empty($rows)) {
-                foreach ($rows as $row) {
-                    echo "<li>";
-                    echo "<span class=\"name\">" . htmlspecialchars($row['name']) . "</span>";
-                    echo "<span class=\"address\">" . htmlspecialchars($row['address']) . "</span>";
-                    echo "<span class=\"hours\">" . htmlspecialchars($row['hours']) . "</span>";
-                    echo "<span class=\"category\">" . htmlspecialchars($row['category']) . "</span>";
-                    echo "</li>";
-                }
-            } else {
-                echo "<li>No restaurants found.</li>";
-            }
-            ?>
-        </ul>
-    </div>
 
 
 
