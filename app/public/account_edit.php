@@ -68,6 +68,14 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
     }
 }
 
+// Variabedl i PHP, inleds alltid med dollartecken och
+// avslutas med ett semikolon.
+$greetings = "Athens Food Guide";
+$information = "Your ultimate guide to discovering the best restaurants in Athens.
+Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
+$information_extra = "Create an account to share your experiences and join our community of food lovers.";
+$title = "Athens Food Guide";
+
 ?>
 
 <!DOCTYPE html>
@@ -102,27 +110,31 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
     <?php include "_includes/menu_active.php"; ?>
 
     <main>
-
-        <form action="account_edit.php" method="post">
-
-
-            <label for="name">business name</label>
-            <input type="text" name="name" id="name" value="<?= $name ?>">
+        <div class="container_account">
+            <div class="account_edit_box">
+                <form action="account_edit.php" method="post">
 
 
-            <label for="address">address</label>
-            <input type="text" name="address" id="address" value="<?= $address ?>">
-
-            <label for="description">description</label>
-            <input type="description" name="description" id="description" value="<?= $description ?>">
-
-            <input type="submit" value="SAVE" name="save" id="edits">
-            <input type="submit" value="REMOVE" name="delete" id="edits">
+                    <label for="name">Name of Restaurant</label>
+                    <input type="text" name="name" id="name" value="<?= $name ?>">
 
 
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" value="<?= $address ?>">
 
-            <input type="hidden" name="id" value="<?= $id ?>">
-        </form>
+                    <label for="description">Description</label>
+                    <input type="description" name="description" id="description" value="<?= $description ?>">
+
+                    <input type="submit" value="SAVE" name="save" id="edits">
+                    <input type="submit" value="REMOVE" name="delete" id="edits">
+
+
+
+                    <input type="hidden" name="id" value="<?= $id ?>">
+                </form>
+            </div>
+        </div>
+
     </main>
 
 

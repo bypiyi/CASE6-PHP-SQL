@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 /* ----------------------------- */
 
 
@@ -36,6 +37,7 @@ header {
     padding-top: 15px;
 
 }
+
 /* --------------------------- */
 
 
@@ -67,7 +69,8 @@ nav a {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
 }
 
 nav a.active {
@@ -75,6 +78,7 @@ nav a.active {
     color: black;
     /* Indikera aktiv länk */
 }
+
 /* --------------------- */
 
 
@@ -92,10 +96,14 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 1rem;;
-    letter-spacing: 2px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
+    font-size: 1rem;
+    ;
+    letter-spacing: 2px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
     padding-bottom: 10px;
 }
 
@@ -104,8 +112,10 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
 
 /* ---------------- */
@@ -113,7 +123,8 @@ h2 {
 
 /* SLOGAN */
 .box_image {
-    text-align: center; /* Centrera innehåll horisontellt */
+    text-align: center;
+    /* Centrera innehåll horisontellt */
     padding-top: 15px;
 }
 
@@ -121,6 +132,7 @@ h2 {
     width: 280px;
     height: auto;
 }
+
 /* ---------------- */
 
 
@@ -143,9 +155,12 @@ label {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 0.8rem;;
-    letter-spacing: 2.5px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    font-size: 0.8rem;
+    ;
+    letter-spacing: 2.5px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
     margin-bottom: 10px;
 }
 
@@ -180,8 +195,10 @@ button[type="submit"] {
 /* -----REGISTER BUTTON --------- */
 .button-container {
     display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
+    justify-content: center;
+    /* Centrera horisontellt */
+    align-items: center;
+    /* Centrera vertikalt */
     max-width: 800px;
     padding: 20px;
     text-align: center;
@@ -207,7 +224,7 @@ button[type="submit"] {
 /* ------------------ */
 
 /* FILVÄLJARE */
-.file{
+.file {
     color: white;
 }
 
@@ -236,6 +253,104 @@ ul#result li {
 }
 
 
+
+/* ACCOUNT EDIT */
+/* Stilar för formulärbehållaren */
+
+.container_account {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%;
+    width: 100%; */
+}
+
+
+.account_edit_box {
+    background-color: rgba(36, 36, 36, 0.856);
+    padding: 20px;
+    width: 100%;
+}
+
+/* Stilar för formulärets etiketter */
+.account_edit_box label {
+    display: block;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    /* Increase letter spacing */
+    line-height: 1.5;
+    /* Increase line height */
+    text-transform: uppercase;
+}
+
+/* Stilar för formulärets textfält */
+.account_edit_box input[type="text"],
+.account_edit_box input[type="description"] {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #f1f1ee;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    /* Increase letter spacing */
+    line-height: 1.5;
+    /* Increase line height */
+    text-transform: uppercase;
+    color: black;
+}
+
+/* Stilar för formulärets knappar */
+.account_edit_box input[type="submit"] {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Specifika färger för olika knappar */
+.account_edit_box input[name="save"] {
+    background-color: black;
+    color: white;
+    margin-right: 4%;
+    width: 100%;
+    height: 45px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.account_edit_box input[name="delete"] {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 45px;
+    border: 1px solid black;
+
+}
+
+/* Stil för dolda inputfält */
+.account_edit_box input[type="hidden"] {
+    display: none;
+}
+
+
+
+
 /* -----------  FOOTER ---------- */
 .footer {
     color: black;
@@ -250,6 +365,6 @@ p {
     font-weight: 500;
     font-style: normal;
     font-size: 0.6rem;
-    letter-spacing: 1.4px; 
-    line-height: 1.5; 
+    letter-spacing: 1.4px;
+    line-height: 1.5;
 }
