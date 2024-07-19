@@ -106,12 +106,22 @@ $title = "Athens Food Guide";
     </header>
 
 
-    <!-- inkludera nav -->
+    <!-- inkludera nav --> <!-- inkludera nav -->
     <?php include "_includes/menu_active.php"; ?>
+
+
+
+    <div class="box_image">
+        <img src="styles/images/slogan.png" class="slogan" alt="">
+    </div>
 
     <main>
         <div class="container_account">
             <div class="account_edit_box">
+
+                <p class="edit_text">Want to change something? <br>
+                    Do it down here!</p>
+
                 <form action="account_edit.php" method="post">
 
 

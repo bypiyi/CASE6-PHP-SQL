@@ -68,7 +68,8 @@ $title = "Athens Food Guide";
 
         <div class="account">
             <p class="account_text">
-                Welcomet to your account. Here you'll see your added
+                Welcome to your account. <br>
+                Here you'll see your added
                 restaurants
             </p>
         </div>

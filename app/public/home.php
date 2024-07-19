@@ -41,7 +41,7 @@ $title = "Athens Food Guide";
     <?php include "_includes/menu_active.php"; ?>
 
 
-    
+
     <div class="box_image">
         <img src="styles/images/slogan.png" class="slogan" alt="">
     </div>

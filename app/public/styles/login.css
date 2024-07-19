@@ -262,19 +262,19 @@ ul#result li {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100%;
-    width: 100%; */
 }
 
 
 .account_edit_box {
-    background-color: rgba(36, 36, 36, 0.856);
-    padding: 20px;
+    background-color: rgb(36, 36, 36);
+    ;
+    padding: 30px;
     width: 100%;
 }
 
 /* Stilar för formulärets etiketter */
 .account_edit_box label {
+    margin-top: 20px;
     display: block;
     margin-bottom: 15px;
     color: white;
@@ -301,9 +301,9 @@ ul#result li {
     border-radius: 5px;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 1.4px;
     /* Increase letter spacing */
     line-height: 1.5;
@@ -312,35 +312,56 @@ ul#result li {
     color: black;
 }
 
+
+
 /* Stilar för formulärets knappar */
 .account_edit_box input[type="submit"] {
     width: 48%;
     padding: 10px;
-    border: none;
     color: #fff;
     font-size: 14px;
     cursor: pointer;
-    box-sizing: border-box;
 }
 
 /* Specifika färger för olika knappar */
 .account_edit_box input[name="save"] {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 55px;
+    border: 1px solid white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    /* Increase letter spacing */
+    line-height: 1.5;
+    /* Increase line height */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.account_edit_box input[name="delete"] {
     background-color: black;
     color: white;
     margin-right: 4%;
     width: 100%;
-    height: 45px;
+    height: 55px;
     border-radius: 0px;
     margin-bottom: 10px;
-}
-
-.account_edit_box input[name="delete"] {
-    background-color: white;
-    color: black;
-    width: 100%;
-    height: 45px;
-    border: 1px solid black;
-
+    border: 1px solid white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    /* Increase letter spacing */
+    line-height: 1.5;
+    /* Increase line height */
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 /* Stil för dolda inputfält */
@@ -348,6 +369,24 @@ ul#result li {
     display: none;
 }
 
+.edit_text {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    /* Increase letter spacing */
+    line-height: 1.7;
+    /* Increase line height */
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* ------------ */
 
 
 

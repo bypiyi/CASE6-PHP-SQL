@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 /* ----------------------------- */
 
 
@@ -36,6 +37,7 @@ header {
     padding-top: 15px;
 
 }
+
 /* --------------------------- */
 
 
@@ -50,7 +52,7 @@ nav {
 }
 
 nav li {
-    margin-top:5px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -73,8 +75,10 @@ nav a {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
 }
+
 /* --------------------- */
 
 
@@ -95,10 +99,14 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 1rem;;
-    letter-spacing: 2px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
+    font-size: 1rem;
+    ;
+    letter-spacing: 2px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
     padding-bottom: 10px;
 }
 
@@ -107,14 +115,17 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
 
 
 .exampels {
     margin-top: 70px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    ;
 }
 
 /* ---------------- */
@@ -122,7 +133,8 @@ h2 {
 
 /* SLOGAN */
 .box_image {
-    text-align: center; /* Centrera innehåll horisontellt */
+    text-align: center;
+    /* Centrera innehåll horisontellt */
     padding-top: 15px;
 }
 
@@ -130,6 +142,7 @@ h2 {
     width: 280px;
     height: auto;
 }
+
 /* ---------------- */
 
 
@@ -168,8 +181,10 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
     cursor: pointer;
     margin-top: 10px;
 }
@@ -181,10 +196,14 @@ h2 {
     color: #f1f1f1;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.2rem;;
-    letter-spacing: 3px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
+    font-size: 1.2rem;
+    ;
+    letter-spacing: 3px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
     padding-bottom: 10px;
 }
 
@@ -194,9 +213,12 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.9rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
+
 /* ----------------- */
 
 
@@ -282,6 +304,7 @@ h2 {
     color: #ffffff;
     border-radius: 4px;
 }
+
 /* --------------------- */
 
 
@@ -302,6 +325,6 @@ p {
     font-weight: 500;
     font-style: normal;
     font-size: 0.6rem;
-    letter-spacing: 1.4px; 
-    line-height: 1.5; 
+    letter-spacing: 1.4px;
+    line-height: 1.5;
 }
