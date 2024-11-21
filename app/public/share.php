@@ -1,10 +1,17 @@
 <?php
 include "_includes/database_connection.php";
 session_start();
+
+// Kontrollera om användaren inte är inloggad
+if (!isset($_SESSION['user_id'])) {
+    // Om användaren inte är inloggad, omdirigera till startsidan
+    header("Location: /");
+    exit; // Stoppa vidare körning av skriptet
+}
+
 $status_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     $name = trim($_POST['name']);
     $address = trim($_POST['address']);
     $description = trim($_POST['description']);
@@ -77,11 +84,9 @@ $title = "Athens Food Guide";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="styles/share.css">
-
     <!-- Hjärta -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KtM4B7lGRpLN4ZC2MkCbqVoVtyzQfK8b9vYFgUn37Jp9E6J" crossorigin="anonymous">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,16 +106,12 @@ $title = "Athens Food Guide";
     <!-- inkludera nav -->
     <?php include "_includes/menu_active.php"; ?>
 
-
     <div class="box_image">
         <img src="styles/images/slogan.png" class="slogan" alt="">
     </div>
 
-
-
     <div class="search">
-
-        <h1>Add your new, old or recently discoverd favorite</h1>
+        <h1>Add your new, old or recently discovered favorite</h1>
 
         <?php if (!empty($status_message)) {
             echo '<p>' . $status_message . '</p>';
@@ -133,9 +134,8 @@ $title = "Athens Food Guide";
         </form>
     </div>
 
-
     <div class="added">
-    <h1>hey, you just added:</h1>
+        <h1>hey, you just added:</h1>
     </div>
 
     <!-- Results -->
@@ -169,13 +169,9 @@ $title = "Athens Food Guide";
         </ul>
     </div>
 
-
-
     <div class="box_image">
         <img src="styles/images/restaurant5.jpg" alt="" style="width: 100%; height: auto; padding-top: 30px;">
     </div>
-
-
 
     <!-- Footer -->
     <footer class="footer">

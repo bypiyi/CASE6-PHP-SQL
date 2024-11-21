@@ -3,21 +3,17 @@
 // skapa länkar via en array
 // uppgift - skriv om som en associativ array
 $nav_links = array(
-    // "index.php" => "Start",
     "index.php" => "HOME",
-    // "sample.php" => "Sample",
-    "register.php" => "REGISTER"
+    "register.php" => "REGISTER",
 );
 
- // om man är inloggad ska meny inte visa Logga in - utan Logga ut
- if (isset($_SESSION['user_id'])) {
+// om man är inloggad ska meny inte visa Logga in - utan Logga ut
+if (isset($_SESSION['user_id'])) {
     $nav_links['logout.php'] = "Logga ut";
 } else {
     $nav_links['login.php'] = "LOGIN";    
 }
 
-// skriv ut global $_SERVER - för att få hjälpmed aktuellt filnamn
-// print_r($_SERVER);
 ?>
 
 <nav>

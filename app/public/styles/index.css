@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 /* ----------------------------- */
 
 
@@ -36,6 +37,7 @@ header {
     padding-top: 15px;
 
 }
+
 /* --------------------------- */
 
 
@@ -78,7 +80,8 @@ nav a {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
 }
 
 nav a.active {
@@ -86,6 +89,7 @@ nav a.active {
     color: black;
     /* Indikera aktiv länk */
 }
+
 /* --------------------- */
 
 
@@ -98,14 +102,30 @@ nav a.active {
 
 }
 
+
+.container-content-create {
+    max-width: 800px;
+    background-color: rgb(222, 199, 245);
+    padding: 25px;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+
+}
+
+
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 1rem;;
-    letter-spacing: 2px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
-    text-transform: uppercase; /* Gör all text i containern versal */
+    font-size: 1rem;
+    ;
+    letter-spacing: 2px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
+    text-transform: uppercase;
+    /* Gör all text i containern versal */
     padding-bottom: 10px;
 }
 
@@ -114,15 +134,18 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 0.8rem;
-    letter-spacing: 1.4px; /* Ökar avståndet mellan bokstäver */
-    line-height: 1.5; /* Ökar radavståndet */
+    letter-spacing: 1.4px;
+    /* Ökar avståndet mellan bokstäver */
+    line-height: 1.5;
+    /* Ökar radavståndet */
 }
 
 /* ---------------- */
 
 /* SLOGAN */
 .box_image {
-    text-align: center; /* Centrera innehåll horisontellt */
+    text-align: center;
+    /* Centrera innehåll horisontellt */
     padding-top: 15px;
 }
 
@@ -130,6 +153,7 @@ h2 {
     width: 280px;
     height: auto;
 }
+
 /* ---------------- */
 
 
@@ -137,9 +161,12 @@ h2 {
 /* --------------- BUTTONS -------------- */
 .button-container {
     display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    gap: 5px; /* Utrymme mellan knapparna */
+    justify-content: center;
+    /* Centrera horisontellt */
+    align-items: center;
+    /* Centrera vertikalt */
+    gap: 5px;
+    /* Utrymme mellan knapparna */
     max-width: 800px;
     padding: 20px;
     text-align: center;
@@ -186,8 +213,8 @@ p {
     font-weight: 500;
     font-style: normal;
     font-size: 0.6rem;
-    letter-spacing: 1.4px; 
-    line-height: 1.5; 
+    letter-spacing: 1.4px;
+    line-height: 1.5;
 }
 
 

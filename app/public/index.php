@@ -6,7 +6,10 @@
 $greetings = "Athens Food Guide";
 $information = "Your ultimate guide to discovering the best restaurants in Athens.
 Here, you can find recommendations, share your own tips, and get advice from fellow food enthusiasts";
-$information_extra = "Create an account to share your experiences and join our community of food lovers.";
+$information_extra = "Create an account to share your experiences and join our community of food lovers 
+- our just see some of our great suggestions down below. ";
+$create = "Do you want to add your own recommendation?
+Create and account or login here!";
 $title = "Athens Food Guide";
 
 
@@ -57,8 +60,18 @@ $title = "Athens Food Guide";
     </div>
 
     <div class="button-container">
+        <a href="discover_guest.php" class="btn register-btn">DISCOVER OUR RESTAURANTS</a>
+    </div>
+
+
+    <div class="container-content-create">
+        <h2><?= $create ?></h2>
+    
+
+    <div class="button-container">
         <a href="register.php" class="btn register-btn">Register</a>
         <a href="login.php" class="btn login-btn">Login</a>
+    </div>
     </div>
 
     <div class="box_image">

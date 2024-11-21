@@ -37,7 +37,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
     </header>
 
     <!-- inkludera nav -->
-    <?php include "_includes/menu_active.php"; ?>
+    <?php include "_includes/nav.php"; ?>
 
     <div class="container-content">
         <p id="greetings2">
@@ -63,7 +63,12 @@ $isLoggedIn = isset($_SESSION['user_id']);
             </p> <br>
 
             <p id="get_started">
-                "Breakfast" "Sushi"<br> "Italian" "Downtown" "Fish"
+                "Breakfast" "Sushi"<br> "Italian" "Downtown" "Fish"<br>
+            </p>
+
+            <p id="get_started">
+                <br>Want to add your own recommendations?<br><br>
+                Create an account or login to countine!
             </p>
         </div>
     </div>
